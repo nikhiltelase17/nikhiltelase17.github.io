@@ -55,3 +55,21 @@ sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{});
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200}); 
+
+// form submition
+
+function submitForm(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+  
+    // Get the form element
+    const form = document.querySelector('.contact__form');
+  
+    // Clear all input fields and textarea
+    form.querySelectorAll('input, textarea').forEach(element => {
+      element.value = '';
+    });
+  
+    // Optionally, provide feedback to the user
+    alert('Form submitted successfully!');
+  }
+  
